@@ -1,0 +1,22 @@
+@mixin title() {
+  color: $color-black;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: $margin-2 0;
+}
+
+@mixin subtitle() {
+  color: $color-grey-dark;
+  font-size: 1.5rem;
+  font-weight: regular;
+  margin: 0;
+  padding: $margin-1 0;
+}
+
+@mixin regularText() {
+  font-size: 1em;
+  font-weight: regular;
+  color: $color-black;
+  text-align: justify;
+}

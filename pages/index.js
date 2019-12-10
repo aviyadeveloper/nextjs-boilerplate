@@ -1,88 +1,31 @@
-import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
+import React from 'react';
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Article from '../components/Article';
+import '../styles/styles.scss';
 
-const Home = () => (
+const Index = () => (
   <div>
     <Head>
-      <title>Home</title>
+      <title>Index</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Nav />
-
-    <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
-      <div className="row">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
-      </div>
+    <Navbar />
+    <div className="content-container">
+      <Article
+        title="Index Article"
+        subtitle="This is the main index article"
+        content={content}
+      />
     </div>
-
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
-    `}</style>
   </div>
-)
+);
 
-export default Home
+const content = [
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget elit tincidunt, pharetra ipsum at, cursus erat. Quisque neque nulla, egestas id justo id, luctus sodales urna. Mauris pulvinar lobortis vestibulum. Donec a tellus nec nibh gravida egestas a sit amet mauris. Mauris sit amet ligula non tortor feugiat rhoncus et id erat. Nullam tempus ex risus. Donec at pulvinar dui. Ut sit amet nulla porta, convallis diam eget, ultricies felis. Aliquam iaculis molestie velit vitae congue. Ut ullamcorper sodales dolor at condimentum. Aenean id scelerisque odio. Curabitur molestie nisl vulputate, egestas sapien eu, cursus quam. Nam facilisis ac metus id feugiat. Donec ullamcorper ultrices felis, a consequat elit condimentum eget.',
+  'Cras sollicitudin ultrices sapien id dictum. Aliquam odio augue, convallis eu eleifend sed, fringilla dignissim est. Vestibulum ultrices magna metus, vitae lobortis ante vulputate id. Vivamus dignissim dapibus odio ut dictum. Nulla mauris nisl, pellentesque ac nibh nec, venenatis egestas elit. Duis quis massa eget urna rhoncus pulvinar sit amet ac nunc. Integer lacinia, elit sed viverra tristique, augue nulla rhoncus massa, et vehicula justo ante at nulla.',
+  'Quisque cursus ultricies libero a mattis. Integer a leo quis dolor laoreet pellentesque. Praesent quis tincidunt neque. Praesent sed ante sit amet risus imperdiet mollis. Nulla facilisi. Integer imperdiet fringilla ante eget commodo. Morbi pretium eleifend ante et sollicitudin. Fusce elementum elementum molestie. Nam ultricies at neque vitae ultricies. Phasellus id dignissim mi. Proin iaculis urna sapien, pellentesque pharetra ante ultricies ut. Pellentesque quis sem ac lacus fermentum mattis non ut.'
+];
+
+export default Index;

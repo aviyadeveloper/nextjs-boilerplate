@@ -1,0 +1,23 @@
+nav.navbar {
+  background-color: $color-primary-dark;
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar__links__link {
+  color: $color-secondary-light;
+  flex-grow: 1;
+  font-weight: bold;
+  padding: $margin-4;
+  text-align: center;
+  text-transform: uppercase;
+  transition-duration: 200ms;
+}
+
+.navbar__links__link:hover {
+  background-color: $color-primary-light;
+  cursor: pointer;
+  transition-duration: 200ms;
+}

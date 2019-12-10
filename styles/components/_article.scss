@@ -1,0 +1,11 @@
+.article__header__title {
+  @include title();
+}
+
+.article__header__subtitle {
+  @include subtitle();
+}
+
+.article__content__paragraph {
+  @include regularText();
+}
